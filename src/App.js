@@ -10,12 +10,13 @@ const App = () => {
   return (
     <BrowserRouter>
   <Navbar/>
+
   <Routes>
     <Route path = "/" element = {<Home/>}/>
     <Route path = "/about" element = {<About/>}/>
     <Route path = "/portfolio" element = {<Portfolio/>}/>
     <Route path = "/service" element = {<Service/>}/>
-    <Route path = "/contact" element = {<Contact/>}/>
+    <Route path = "/contacts" element = {<Contact/>}/>
 
     
   </Routes>

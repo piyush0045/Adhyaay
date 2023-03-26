@@ -13,3 +13,15 @@ code {
     monospace;
 }
 
+.body{
+  background-color:black;
+  width:auto;
+}
+.contact{
+  background-color:black;
+  width:auto;
+  height:100vh;
+}
+
+
+ 
