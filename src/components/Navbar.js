@@ -17,8 +17,8 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import PinterestIcon from "@mui/icons-material/Pinterest";
+//import FacebookIcon from "@mui/icons-material/Facebook";
+//import PinterestIcon from "@mui/icons-material/Pinterest";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
@@ -134,12 +134,9 @@ const Navbar = () => {
           <StyledToolbar>
             <StyledHome to="/">Home</StyledHome>
             <StyledLink to="/about">About</StyledLink>
-            <StyledLink to="/portfolio">Portfolio</StyledLink>
-            <StyledLink to="/service">Service</StyledLink>
+            <StyledLink to="/events">Events</StyledLink>
+            <StyledLink to="/merch">Merch</StyledLink>
             <StyledLink to="/contacts">Contacts</StyledLink>
-            <TwitterIcon />
-            <FacebookIcon />
-            <PinterestIcon />
             <Link
               to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';"
               style={{ color: "white" }}
@@ -176,7 +173,7 @@ const Navbar = () => {
           {openDrawer && (
             <div>
               <List>
-              <InstagramIcon/>
+          <Link to =  "https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" sx = {{textDecoration:"none",color:"white"}}>    <InstagramIcon/> </Link>
                 {navItems.map((item) => (
                   <Link to={item.link} style= {{textDecoration:"none",color:"white",fontWeight:"bold"}}>
                     <ListItem>
