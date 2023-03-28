@@ -59,8 +59,8 @@ const navItems = [
     link: "/portfolio",
   },
   {
-    text: "Service",
-    link: "/service",
+    text: "Events",
+    link: "/events",
   },
   {
     text: "Contacts",
