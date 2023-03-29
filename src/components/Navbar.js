@@ -28,6 +28,7 @@ import { routePath } from "../constants/route";
 import "../App.css";
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from "../assets/logo.jpg"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -76,6 +77,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  color:"#eee8aa"
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -109,7 +111,6 @@ const StyledHome = styled(Link)`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
-  color: white;
 `;
 
 const Navbar = () => {
@@ -132,17 +133,20 @@ const Navbar = () => {
       {matches && (
         <AppBar style={{ backgroundColor: "black", minHeight: 53 }}>
           <StyledToolbar>
-            <StyledHome to="/">Home</StyledHome>
-            <StyledLink to="/about">About</StyledLink>
-            <StyledLink to="/events">Events</StyledLink>
-            <StyledLink to="/merch">Merch</StyledLink>
-            <StyledLink to="/contacts">Contacts</StyledLink>
+            <img src = {logo} alt = "logo" style = {{width:"70px",marginLeft:"10px"}}/>
+            <p style = {{fontWeight:"bold",fontSize:"20px",marginLeft:"-50px",letterSpacing:"2px ",color:"#eee8aa"}}>ADHYAAY'23</p>
+
+            <StyledHome style = {{color:"#eee8aa"}} to="/">Home</StyledHome>
+            <StyledLink style = {{color:"#eee8aa"}}to="/about">About</StyledLink>
+            <StyledLink style = {{color:"#eee8aa"}}to="/events">Events</StyledLink>
+            <StyledLink style = {{color:"#eee8aa"}}to="/merch">Merch</StyledLink>
+            <StyledLink style = {{color:"#eee8aa"}}to="/contacts">Contacts</StyledLink>
             <Link
               to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';"
               style={{ color: "white" }}
             >
               {" "}
-              <InstagramIcon />
+              <InstagramIcon style = {{color:"#eee8aa"}}/>
             </Link>
             <Search>
               <SearchIconWrapper>
@@ -177,8 +181,10 @@ const Navbar = () => {
                 {navItems.map((item) => (
                   <Link to={item.link} style= {{textDecoration:"none",color:"white",fontWeight:"bold"}}>
                     <ListItem>
+                        
                       <ListItemText primary={item.text} />
                     </ListItem>
+                    
                   </Link>
                 ))}
               </List>

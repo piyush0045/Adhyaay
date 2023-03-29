@@ -11,12 +11,13 @@ const About = () => {
           marginLeft: "20px",
           color: "white",
           fontFamily: "serif",
+          color:"#eee8aa"
         }}
       >
         About
       </Typography>
       <Typography
-        style={{ color: "white", fontFamily: "serif", marginLeft: "20px" }}
+        style={{ color: "white", fontFamily: "serif", marginLeft: "20px",color:"#eee8aa"}}
       >
         ADHYAAY is the annual literary-cum-cultural fest of HBTU. It is expected
         that ADHYAAY'23 will have 10,000+ footfalls and hence it will be larger
@@ -31,7 +32,7 @@ const About = () => {
         style={{
           marginTop: "40px",
           marginLeft: "20px",
-          color: "white",
+          color: "#eee8aa",
           fontFamily: "serif",
         }}
       >

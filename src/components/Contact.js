@@ -1,13 +1,15 @@
 import { Typography } from "@mui/material";
+import CallIcon from "@mui/icons-material/Call";
+import MailIcon from "@mui/icons-material/Mail";
+import Instagram from "@mui/icons-material/Instagram";
 
 const Contact = () => {
-    return ( 
-        <div className="contact"style = {{color:"white",overflowY:"hidden"}}>
-         <Typography  style= {{marginTop:"60px"}}variant = "h2">Contact</Typography>
-         <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maiores excepturi, incidunt voluptate deleniti doloribus veniam voluptatum amet aliquam quidem placeat odit tenetur natus facere. Eius provident modi libero cupiditate.</Typography>
-           
-        </div>
-     );
-}
- 
+  return (
+    <div className="contact" style={{ color: "white", overflowY: "hidden" }}>
+        <p  style ={{marginTop:"60px",color:"#eee8aa",marginleft:"30px",fontSize:"50px",marginLeft:"20px"}}>Contact Us</p>
+      
+    </div>
+  );
+};
+
 export default Contact;

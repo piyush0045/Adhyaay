@@ -39,7 +39,7 @@ const Team = () => {
         {
             profiles.map((profile,i)=>(
                 <div key={i} style={{borderWidth: 10, borderColor: 'white', padding: 30}}>
-                    <Typography variant="h4" color={'white'}>{profile.position}</Typography>
+                    <Typography variant="h4" color={'#eee8aa'}>{profile.position}</Typography>
                     <img src={profile.img} style={{height: 200, width: 300}}/>
                 </div>
             ))
