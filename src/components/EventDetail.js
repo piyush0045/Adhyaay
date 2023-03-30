@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const EventDetail = () => {
   const route = useLocation();
-  const { des } = route.state;
+  const { des ,name} = route.state;
   // console.log("Description",des)
   return (
     <div
@@ -16,9 +16,11 @@ const EventDetail = () => {
        display: "flex",
         justifyContent: "center",
        alignItems: "center",
+       flexDirection: 'column'
       }}
     >
-      <p style = {{color:"#eee8aa",lineHeight:"40px",marginTop:"-60px",fontSize:"20px"}}>
+      <h1 style = {{color:"#eee8aa",position: 'absolute', top: 80}}>{name}</h1>
+      <p style = {{color:"#eee8aa",fontSize:"20px",paddingLeft: 20,paddingRight: 20}}>
    {des}</p>
     </div>
   );

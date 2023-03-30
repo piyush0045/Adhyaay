@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom'
 
 const EventCard = ({name,des,img}) => {
   return (
-    <Link style = {{textDecoration:"none", width: 300, height: 200, color: 'white', marginTop: 40,color:"#eee8aa",}} to={`/event/${name}`} state={{des: des}}>
+    <Link style = {{textDecoration:"none", width: 300, height: 200, color: 'white', marginTop: 40,color:"#eee8aa",}} to={`/event/${name}`} state={{des: des,name: name}}>
         <img src={img} style={{width: 200, height: 200}}/>
       <p>{name}</p>
     </Link>

@@ -131,7 +131,7 @@ const Navbar = () => {
   return (
     <>
       {matches && (
-        <AppBar style={{ backgroundColor: "black", minHeight: 53 }}>
+        <AppBar style={{ backgroundColor: "black", minHeight: 53 ,position: 'sticky'}}>
           <StyledToolbar>
             <img src = {logo} alt = "logo" style = {{width:"70px",marginLeft:"10px"}}/>
             <p style = {{fontWeight:"bold",fontSize:"20px",marginLeft:"-50px",letterSpacing:"2px ",color:"#eee8aa"}}>ADHYAAY'23</p>
@@ -174,6 +174,7 @@ const Navbar = () => {
       {!matches && (
         <AppBar  sx = {{backgroundColor:"black"}}>
           <MenuIcon onClick={handleDrawer} />
+          <img src={logo} width={30} style={{position: 'absolute', top: 0, left: 30}}/>
           {openDrawer && (
             <div>
               <List>

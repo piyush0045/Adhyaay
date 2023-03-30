@@ -3,21 +3,21 @@ import Team from "../components/Carousel";
 
 const About = () => {
   return (
-    <div className="body">
+    <div className="body" >
       <Typography
         variant="h2"
         style={{
-          marginTop: "60px",
+          paddingTop: "12px",
           marginLeft: "20px",
-          color: "white",
           fontFamily: "serif",
-          color:"#eee8aa"
+          color:"#eee8aa",
+          backgroundColor: 'black'
         }}
       >
         About
       </Typography>
       <Typography
-        style={{ color: "white", fontFamily: "serif", marginLeft: "20px",color:"#eee8aa"}}
+        style={{ color: "white", fontFamily: "serif",color:"#eee8aa",paddingLeft: 10,paddingRight: 10}}
       >
         ADHYAAY is the annual literary-cum-cultural fest of HBTU. It is expected
         that ADHYAAY'23 will have 10,000+ footfalls and hence it will be larger
