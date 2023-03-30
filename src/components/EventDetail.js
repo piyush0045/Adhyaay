@@ -18,7 +18,8 @@ const EventDetail = () => {
        alignItems: "center",
       }}
     >
-      <p style = {{color:"#eee8aa",lineHeight:"40px",marginTop:"-60px",fontSize:"20px"}}>{des}</p>
+      <p style = {{color:"#eee8aa",lineHeight:"40px",marginTop:"-60px",fontSize:"20px"}}>
+   {des}</p>
     </div>
   );
 };

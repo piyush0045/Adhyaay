@@ -56,8 +56,8 @@ const navItems = [
     link: "/about",
   },
   {
-    text: "Portfolio",
-    link: "/portfolio",
+    text: "Merch",
+    link: "/merch",
   },
   {
     text: "Events",
@@ -177,9 +177,9 @@ const Navbar = () => {
           {openDrawer && (
             <div>
               <List>
-          <Link to =  "https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" sx = {{textDecoration:"none",color:"white"}}>    <InstagramIcon/> </Link>
+          <Link to =  "https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" style = {{textDecoration:"none",color:"#eee8aa"}}>    <InstagramIcon/> </Link>
                 {navItems.map((item) => (
-                  <Link to={item.link} style= {{textDecoration:"none",color:"white",fontWeight:"bold"}}>
+                  <Link to={item.link} style= {{textDecoration:"none",color:"#eee8aa",fontWeight:"bold"}}>
                     <ListItem>
                         
                       <ListItemText primary={item.text} />

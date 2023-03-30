@@ -1,6 +1,6 @@
 const Merch = () => {
     return ( 
-        <div>Hello from Merch</div>
+        <div> </div>
      );
 }
  
