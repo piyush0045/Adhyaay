@@ -3,21 +3,29 @@ import Team from "../components/Carousel";
 
 const About = () => {
   return (
-    <div className="body" >
+    <div className="body">
       <Typography
         variant="h2"
         style={{
           paddingTop: "12px",
           marginLeft: "20px",
           fontFamily: "serif",
-          color:"#eee8aa",
-          backgroundColor: 'black'
+          color: "#eee8aa",
+          backgroundColor: "black",
+          textAlign: "center",
         }}
       >
         About
       </Typography>
       <Typography
-        style={{ color: "white", fontFamily: "serif",color:"#eee8aa",paddingLeft: 10,paddingRight: 10}}
+        style={{
+          color: "white",
+          fontFamily: "serif",
+          color: "#eee8aa",
+          paddingLeft: 40,
+          paddingRight: 30,
+          paddingTop: 20,
+        }}
       >
         ADHYAAY is the annual literary-cum-cultural fest of HBTU. It is expected
         that ADHYAAY'23 will have 10,000+ footfalls and hence it will be larger
@@ -28,17 +36,18 @@ const About = () => {
       </Typography>
 
       <Typography
-        variant="h2"
+        variant="h3"
         style={{
           marginTop: "40px",
           marginLeft: "20px",
           color: "#eee8aa",
           fontFamily: "serif",
+          textAlign: "center",
         }}
       >
         Meet The Team
       </Typography>
-      <div style={{paddingBottom: 30, paddingLeft: 40, paddingRight: 40}}>
+      <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
         <Team />
       </div>
     </div>

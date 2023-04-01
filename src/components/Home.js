@@ -22,10 +22,16 @@ const Home = () => {
     //       Adhyaay
     // </p>
     //  </div>
-
-    <video  id="videoBG" autoPlay muted loop>
-      <source style={{marginTop:"5px",overflowY:"hidden"}} src={adhyaay} type="video/mp4" />
-    </video>
+    <div style={{ marginTop: -100 }}>
+      <video
+        id="videoBG"
+        autoPlay
+        // muted
+        loop
+      >
+        <source src={adhyaay} type="video/mp4" />
+      </video>
+    </div>
   );
 };
 
