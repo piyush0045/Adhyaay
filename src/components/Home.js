@@ -1,6 +1,8 @@
 import background from "../assets/background.jpg";
 import styled from "styled-components";
-import fest from "../assets/fest.mp4";
+//import fest from "../assets/fest.mp4";
+import adhyaay from "../assets/ADHYAAY'22F.mp4";
+import { Hidden } from "@mui/material";
 
 const Home = () => {
   return (
@@ -20,32 +22,10 @@ const Home = () => {
     //       Adhyaay
     // </p>
     //  </div>
-    <div className = "videoTag">
-      <video
-        className="video"
-        autoPlay
-        loop
-        muted
-        style={{
-         
 
-        }}
-      >
-        <source src={fest} type="video/mp4" />
-      </video>
-      <p
-        style={{
-          color: "Background",
-          fontWeight: "bolder",
-          fontSize: 80,
-          position: "absolute",
-          top: 100,
-          left: 300
-        }}
-      >
-        Adhyaay
-      </p>
-    </div>
+    <video  id="videoBG" autoPlay muted loop>
+      <source style={{marginTop:"5px",overflowY:"hidden"}} src={adhyaay} type="video/mp4" />
+    </video>
   );
 };
 
