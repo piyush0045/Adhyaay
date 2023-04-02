@@ -47,9 +47,10 @@ const About = () => {
       >
         Meet The Team
       </Typography>
-      <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
+      {/* <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
         <Team />
-      </div>
+      </div> */}
+      <Typography variant="h4">Stay tuned for the team</Typography>
     </div>
   );
 };
