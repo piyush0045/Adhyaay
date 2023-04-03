@@ -77,7 +77,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color:"#eee8aa"
+  color: "#eee8aa"
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -131,61 +131,41 @@ const Navbar = () => {
   return (
     <>
       {matches && (
-        <AppBar style={{ backgroundColor: "black", minHeight: 53 ,position: 'sticky'}}>
+        <AppBar style={{ backgroundColor: "black", minHeight: 53, position: 'sticky' }}>
           <StyledToolbar>
-            <img src = {logo} alt = "logo" style = {{width:"70px",marginLeft:"10px"}}/>
-            <p style = {{fontWeight:"bold",fontSize:"20px",marginLeft:"-50px",letterSpacing:"2px ",color:"#eee8aa"}}>ADHYAAY'23</p>
+            <img src={logo} alt="logo" style={{ width: "70px", marginRight: "10px" }} />
+            <p style={{ fontWeight: "bold", fontSize: "20px", marginLeft: "-50px", letterSpacing: "2px ", color: "#eee8aa" }}>ADHYAAY'23</p>
 
-            <StyledHome style = {{color:"#eee8aa"}} to="/">Home</StyledHome>
-            <StyledLink style = {{color:"#eee8aa"}}to="/about">About</StyledLink>
-            <StyledLink style = {{color:"#eee8aa"}}to="/events">Events</StyledLink>
-            <StyledLink style = {{color:"#eee8aa"}}to="/merch">Merch</StyledLink>
-            <StyledLink style = {{color:"#eee8aa"}}to="/contacts">Contacts</StyledLink>
+            <StyledHome style={{ color: "#eee8aa" }} to="/">Home</StyledHome>
+            <StyledLink style={{ color: "#eee8aa" }} to="/about">About</StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/events">Events</StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/merch">Merch</StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/contacts">Contacts</StyledLink>
             <Link
               to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';"
               style={{ color: "white" }}
             >
               {" "}
-              <InstagramIcon style = {{color:"#eee8aa"}}/>
+              <InstagramIcon style={{ color: "#eee8aa" }} />
             </Link>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
-            <Grid
-              style={{
-                fontWeight: "bold",
-                borderRadius: 20,
-                backgroundColor: "orangered",
-                padding: 10,
-                width: 80,
-              }}
-            >
-              BLOG
-            </Grid>
           </StyledToolbar>
         </AppBar>
       )}
       {!matches && (
-        <AppBar  sx = {{backgroundColor:"black"}}>
-          <MenuIcon onClick={handleDrawer} />
-          <img src={logo} width={30} style={{position: 'absolute', top: 0, left: 30}}/>
+        <AppBar sx={{ backgroundColor: "black", height: "60px", position: "sticky" }}>
+          <img src={logo} width={30} style={{ position: 'absolute', top: 0, right: "40%", width: "60px" }} />
+          <MenuIcon onClick={handleDrawer} style={{ height: "50px", width: "50px" }} />
           {openDrawer && (
-            <div>
+            <div style={{ backgroundColor: "black" }}>
               <List>
-          <Link to =  "https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" style = {{textDecoration:"none",color:"#eee8aa"}}>    <InstagramIcon/> </Link>
+                <Link to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" style={{ marginLeft: "10px", textDecoration: "none", color: "#eee8aa" }}>    <InstagramIcon /> </Link>
                 {navItems.map((item) => (
-                  <Link to={item.link} style= {{textDecoration:"none",color:"#eee8aa",fontWeight:"bold"}}>
+                  <Link to={item.link} onClick={handleDrawer} style={{ textDecoration: "none", color: "#eee8aa", fontWeight: "bold" }}>
                     <ListItem>
-                        
+
                       <ListItemText primary={item.text} />
                     </ListItem>
-                    
+
                   </Link>
                 ))}
               </List>

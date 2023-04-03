@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-
 const EventDetail = () => {
   const route = useLocation();
   const { des, name } = route.state;
   // console.log("Description",des)
+
   return (
     <div
       style={{
