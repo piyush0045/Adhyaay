@@ -82,7 +82,7 @@ const Events = () => {
         paddingBottom: 30,
       }}
     >
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div id="eventz" style={{ display: "flex", flexWrap: "wrap" }}>
         {events.map((ev) => (
           <EventCard name={ev.name} des={ev.des} img={ev.img} />
         ))}
