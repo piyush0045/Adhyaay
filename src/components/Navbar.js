@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import {
   AppBar,
   Toolbar,
@@ -28,7 +29,8 @@ import { routePath } from "../constants/route";
 import "../App.css";
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from "../assets/logo.jpg"
+import logo from "../assets/logo.jpg";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -77,7 +79,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "#eee8aa"
+  color: "#eee8aa",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -106,11 +108,13 @@ const StyledHome = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   color: orangered;
+  font-size: 20px;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;
 `;
 
 const Navbar = () => {
@@ -131,41 +135,119 @@ const Navbar = () => {
   return (
     <>
       {matches && (
-        <AppBar style={{ backgroundColor: "black", minHeight: 53, position: 'sticky' }}>
+        <AppBar
+          style={{
+            backgroundColor: "black",
+            minHeight: 53,
+            position: "sticky",
+          }}
+        >
           <StyledToolbar>
-            <img src={logo} alt="logo" style={{ width: "70px", marginRight: "10px" }} />
-            <p style={{ fontWeight: "bold", fontSize: "20px", marginLeft: "-50px", letterSpacing: "2px ", color: "#eee8aa" }}>ADHYAAY'23</p>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "70px", marginRight: "10px" }}
+            />
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "30px",
+                marginLeft: "-50px",
+                letterSpacing: "2px ",
+                color: "#eee8aa",
+              }}
+            >
+              ADHYAAY'22
+            </p>
 
-            <StyledHome style={{ color: "#eee8aa" }} to="/">Home</StyledHome>
-            <StyledLink style={{ color: "#eee8aa" }} to="/about">About</StyledLink>
-            <StyledLink style={{ color: "#eee8aa" }} to="/events">Events</StyledLink>
-            <StyledLink style={{ color: "#eee8aa" }} to="/merch">Merch</StyledLink>
-            <StyledLink style={{ color: "#eee8aa" }} to="/contacts">Contacts</StyledLink>
+            <StyledHome style={{ color: "#eee8aa" }} to="/">
+              Home
+            </StyledHome>
+            <StyledLink style={{ color: "#eee8aa" }} to="/about">
+              About
+            </StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/events">
+              Events
+            </StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/merch">
+              Merch
+            </StyledLink>
+            <StyledLink style={{ color: "#eee8aa" }} to="/contacts">
+              Contacts
+            </StyledLink>
             <Link
               to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';"
               style={{ color: "white" }}
             >
               {" "}
-              <InstagramIcon style={{ color: "#eee8aa" }} />
+              <InstagramIcon style={{ color: "#eee8aa", fontSize: 30 }} />
+            </Link>
+            <Link
+              to="https://youtube.com/@adhyaay22"
+              style={{ color: "white" }}
+            >
+              {" "}
+              <YouTubeIcon style={{ color: "#eee8aa", fontSize: 30 }} />
             </Link>
           </StyledToolbar>
         </AppBar>
       )}
       {!matches && (
-        <AppBar sx={{ backgroundColor: "black", height: "60px", position: "sticky" }}>
-          <img src={logo} width={30} style={{ position: 'absolute', top: 0, right: "40%", width: "60px" }} />
-          <MenuIcon onClick={handleDrawer} style={{ height: "50px", width: "50px" }} />
+        <AppBar
+          sx={{ backgroundColor: "black", height: "60px", position: "sticky" }}
+        >
+          <img
+            src={logo}
+            width={30}
+            style={{
+              position: "absolute",
+              top: 0,
+              right: "40%",
+              width: "60px",
+            }}
+          />
+          <MenuIcon
+            onClick={handleDrawer}
+            style={{ height: "50px", width: "50px" }}
+          />
           {openDrawer && (
             <div style={{ backgroundColor: "black" }}>
               <List>
-                <Link to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';" style={{ marginLeft: "10px", textDecoration: "none", color: "#eee8aa" }}>    <InstagramIcon /> </Link>
+                <Link
+                  to="https://instagram.com/adhyaay_22?igshid=YmMyMTA2M2Y=';"
+                  style={{
+                    marginLeft: "10px",
+                    textDecoration: "none",
+                    color: "#eee8aa",
+                  }}
+                >
+                  {" "}
+                  <InstagramIcon />{" "}
+                </Link>
+                <Link
+                  to="https://youtube.com/@adhyaay22"
+                  style={{
+                    marginLeft: "10px",
+                    textDecoration: "none",
+                    color: "#eee8aa",
+                  }}
+                >
+                  {" "}
+                  <YouTubeIcon />{" "}
+                </Link>
                 {navItems.map((item) => (
-                  <Link to={item.link} onClick={handleDrawer} style={{ textDecoration: "none", color: "#eee8aa", fontWeight: "bold" }}>
+                  <Link
+                    to={item.link}
+                    onClick={handleDrawer}
+                    style={{
+                      textDecoration: "none",
+                      color: "#eee8aa",
+                      fontWeight: "bold",
+                    }}
+                  >
                     <ListItem>
-
                       <ListItemText primary={item.text} />
                     </ListItem>
-
                   </Link>
                 ))}
               </List>
