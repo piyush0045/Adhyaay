@@ -77,3 +77,11 @@ code {
   background: #eee8aa;
   border-radius: 10px;
 }
+
+@media(max-width:767px){
+  #eventz{
+    width: 100%;
+    /* padding:0px 60px; */
+    justify-content: center;
+  }
+}
