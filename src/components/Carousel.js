@@ -35,7 +35,7 @@ const profiles = [
 
 const Team = () => {
   return (
-    <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
+    <div className="team" style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
       {profiles.map((profile, i) => (
         <div
           key={i}
@@ -52,7 +52,7 @@ const Team = () => {
           >
             {profile.position}
           </Typography>
-          <img src={profile.img} style={{ height: 200, width: 300 }} />
+          <img className="about-page-img" src={profile.img} />
         </div>
       ))}
     </div>
